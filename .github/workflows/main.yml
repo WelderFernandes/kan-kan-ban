@@ -13,11 +13,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install -g yarn
+      - run: npm ci
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install 
       - name: Build app
-        run: yarn build 
+        run: npm run build 
       - name: Semantic release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
