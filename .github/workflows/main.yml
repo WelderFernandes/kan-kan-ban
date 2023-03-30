@@ -7,8 +7,8 @@ on:
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
-  publish:
-   permissions:
+  release:
+    permissions:
       contents: write
       issues: write
       pull-requests: write
